@@ -21,22 +21,9 @@ const Logo = () => {
     return (
         <>
             {/*<img ref={ref} src={logo} alt="" className={'h-full'}/>*/}
-            <h1 ref={ref} className={'text-gray-400 text-2xl text-center'}>
-                <span >
-                    Hey stranger, This is
-                </span>
-                <div className={'font-bold m-2 italic text-6xl stroke-1 text-transparent text-center tracking-widest'} style={{
-                    color: '#000',
-                    background: 'transparent',
-                    textShadow: `1px 1px 0 #ADADADFF,
-                     1px -1px 0 #ADADADFF,
-                     -1px 1px 0 #ADADADFF,
-                     -1px -1px 0 #ADADADFF,
-                     1px 0px 0 #ADADADFF,
-                     0px 1px 0 #ADADADFF,
-                     -1px 0px 0 #ADADADFF,
-                     0px -1px 0 #ADADADFF`
-                }}>
+            <h1 ref={ref} className={'text-gray-400 text-2xl w-fit'}>
+                <span>Hey stranger, this is </span>
+                <div className={'font-bold mt-1 text-6xl text-white stroke-1 text-transparent tracking-widest'}>
                     P4RTH
                 </div>
             </h1>

@@ -25,30 +25,33 @@ function App() {
         }
     }, [])
     return (
-        <div className={'bg-black py-14 px-3'}>
+        <div className={'bg-black pt-14 pb-3 px-3'}>
             {!isMobile && <Cursor isGelly={true}/>}
             <div data-cursor-exclusion={true} data-cursor-size="80px"
-                 className={'h-11 px-4 w-fit mx-auto flex justify-center my-28'}>
+                 className={'h-11 px-4 w-fit my-28'}>
                 <Logo/>
             </div>
             <div className={'flex flex-col-reverse lg:flex-row gap-3 mb-3'}>
 
                 <div className={'flex flex-col sm:grid sm:grid-cols-2 gap-3  basis-1/2'}>
-                    <Block link={'#showcase'} isMobile={isMobile} title={'Work'} string={'View our showcase'} colour={'#fff'}
-                           icon={terminalIcon}/>
-                    <Block link={'#aboutUs'} isMobile={isMobile} title={'About us'} string={'Learn more about us'} colour={'#2900E8'}
+                    <Block link={'#projects'} isMobile={isMobile} title={'Work'} string={'Showcase for projects'}
+                           colour={'#fff'}
+                           icon={terminalIcon} cursorColor={'#000'}/>
+                    <Block link={'#aboutUs'} isMobile={isMobile} title={'About us'} string={'Who am i?'}
+                           colour={'#2900E8'}
                            lightText={true}
-                           icon={aboutIcon}/>
+                           icon={aboutIcon} cursorColor={'#fff'}/>
                     <div className={'col-span-2'}>
-                        <Block link={'#contactUs'} isMobile={isMobile} title={'Contact us'} string={'Lets talk business!'}
+                        <Block link={'#contactUs'} isMobile={isMobile} title={'connect with me'}
+                               string={'Lets talk business!'}
                                colour={'#FFF480'}
-                               icon={contactIcon}/>
+                               icon={contactIcon} cursorColor={'#000'}/>
                     </div>
                 </div>
                 <div className={' basis-1/2'} data-cursor-color={"#d4c951"}>
                     <BlockBG
                         textColour={'yellow'}
-                        heading={'Who am i?'}>
+                        heading={'Who am I?'}>
                         A student and web developer specializing in <b className={'font-bold italic'}>Frontend</b> & <b
                         className={'font-bold italic'}>Backend</b> development
                     </BlockBG>
@@ -62,24 +65,53 @@ function App() {
                         I specialize in web development, frontend and backend, creating <i
                         className={'italic font-bold '}>dynamic</i> & <i
                         className={'italic font-bold '}>innovative </i> websites.
-                        {/*We provide clients with stunning Crafty web solutions, developed with <i*/}
-                        {/*className={'font-bold italic'}> skill</i> & <i className={'italic font-bold '}>passion</i>.*/}
                     </BlockBG>
                 </div>
 
                 <div id={'showcase'} className={'overflow-hidden w-full flex flex-col gap-3 mb-3 basis-1/2'}
                      data-cursor-color={"#A5A1FF"}>
 
-                    <BLockScroll icon={terminalIcon} title={'Craft CMS'}
-                                 content={'We are focused on developing, from start to finish, web solutions with Craft CMS, an easy to use content management system where admins can alter or add content to a website.'}/>
-                    <BLockScroll icon={supportIcon} title={'Fast Support'}
-                                 content={'We aim to be as available and supportive as we can to our clients. Feel free to use the form below or contact us directly with questions or requests.'}/>
-                    <BLockScroll icon={eyeIcon} title={'SEO'}
-                                 content={'Using our expertise along with handy tools we strive for a high SEO score, ensuring higher visibility on search sites such as Google.'}/>
+                    <BLockScroll icon={terminalIcon} title={'Open source'}
+                                 content={'I usually make contributions to open source projects. Because of their nature to be free in freedom.'}/>
+                    <BLockScroll icon={supportIcon} title={'Linux'}
+                                 content={'I am a big fan of Linux (the kernel and the distros) as that\'s what inspired and aware me of my privacy. Also because i have full freedom to do whatever to my system.'}/>
+                    <BLockScroll icon={eyeIcon} title={'Web'}
+                                 content={'I love to explore mess like web. That\'s why i contribute in it to be a bigger mess.'}/>
                 </div>
             </div>
 
-            <div id={'contactUs'} className={'before:hidden'} data-cursor-color={"#d4c951"}>
+            <div id={'projects'} className={'before:hidden mb-3'} data-cursor-color={"#81ffca"}>
+                <BlockBG heading={'Projects'} textColour={'white'}>
+                    <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-7 h-96 lg:h-52'}>
+                        <div className={'md:col-span-2 lg:col-span-1'}>
+
+                            <Block link={'#showcase'} isMobile={isMobile} title={'Blog website'}
+                                   string={'View our showcase.'}
+                                   colour={'#fff'}
+                                   icon={terminalIcon} cursorColor={'#000'}/>
+                        </div>
+
+                        <div>
+
+                            <Block link={'#showcase'} isMobile={isMobile} title={'Blog website'}
+                                   string={'View our showcase.'}
+                                   colour={'#fff'}
+                                   icon={terminalIcon}/>
+                        </div>
+
+                        <div>
+
+                            <Block link={'#showcase'} isMobile={isMobile} title={'Blog website'}
+                                   string={'View our showcase.'}
+                                   colour={'#fff'}
+                                   icon={terminalIcon}/>
+                        </div>
+
+                    </div>
+                </BlockBG>
+            </div>
+
+            <div id={'contactUs'} className={'before:hidden'} data-cursor-color={"#d4c951"} data-cursor-background-text="React">
                 <BlockBG heading={'Contact us'} textColour={'yellow'}>
                     {/*Don&lsquo;t be a stranger. <br/> Let&lsquo;s connect*/}
                     Do you have a question, an idea, or a project you need help with? <br/> Just give a message! <br/>
@@ -97,11 +129,12 @@ function App() {
                             </Badge>
                         </div>
                         <div className={'flex gap-5 '}>
-
-                            <Badge>
-                                <img src={linkedinIcon} className={'w-5'} alt=""
-                                     style={{filter: "invert(78%) sepia(90%) saturate(308%) hue-rotate(2deg) brightness(89%) contrast(90%)"}}/>
-                            </Badge>
+                            <div >
+                                <Badge>
+                                    <img src={linkedinIcon} className={'w-5'} alt=""
+                                         style={{filter: "invert(78%) sepia(90%) saturate(308%) hue-rotate(2deg) brightness(89%) contrast(90%)"}}/>
+                                </Badge>
+                            </div>
                             <Badge>
                                 <img src={githubIcon} className={'w-5'} alt=""
                                      style={{filter: "invert(78%) sepia(90%) saturate(308%) hue-rotate(2deg) brightness(89%) contrast(90%)"}}/>

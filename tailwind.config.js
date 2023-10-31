@@ -9,7 +9,8 @@ export default {
                 'blue':'#2900E8',
                 'grayBlue':'#1B1B1F',
                 'purple':'#A5A1FF',
-                'green':'#021f23',
+                'green':'#81ffca',
+                'grayGreen':'#243128',
                 'pink':'#ffaed8',
                 'yellow':'#d4c951',
                 'grayYellow':'#1D1C16'
