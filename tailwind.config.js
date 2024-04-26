@@ -13,7 +13,15 @@ export default {
                 'grayGreen':'#243128',
                 'pink':'#ffaed8',
                 'yellow':'#d4c951',
-                'grayYellow':'#1D1C16'
+                'grayYellow':'#1D1C16',
+                'skyBlue':'#A3D5D1',
+                'darkSkBlue':'#070C0C',
+                'graySkBlue':'#B7BFBF',
+                'darkPink':'#A3D5D1',
+                'grayPink':'#B7BFBF',
+                'lightyellow':'#A3D5D1',
+                'darkYellow':'#070C0C',
+                // 'grayYellow':'#B7BFBF',
             },
             fontFamily:{
                 'sans':['Montserrat', 'sans-serif'],

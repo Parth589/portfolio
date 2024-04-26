@@ -14,6 +14,7 @@ import BlockBG from "./Componenets/BlockBG.jsx";
 import BLockScroll from "./Componenets/BLock-scroll.jsx";
 import Badge from "./Componenets/Badge.jsx";
 import {useEffect, useState} from "react";
+import ProjectCard from "./Componenets/ProjectCard.jsx";
 
 function App() {
     let [isMobile, setIsMobile] = useState(false);
@@ -80,66 +81,52 @@ function App() {
                 </div>
             </div>
 
-            <div id={'projects'} className={'before:hidden mb-3'} data-cursor-color={"#81ffca"}>
-                <BlockBG heading={'Projects'} textColour={'white'}>
-                    <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-7 h-96 lg:h-52'}>
-                        <div className={'md:col-span-2 lg:col-span-1'}>
-
-                            <Block link={'#showcase'} isMobile={isMobile} title={'Blog website'}
-                                   string={'View our showcase.'}
-                                   colour={'#fff'}
-                                   icon={terminalIcon} cursorColor={'#000'}/>
-                        </div>
-
-                        <div>
-
-                            <Block link={'#showcase'} isMobile={isMobile} title={'Blog website'}
-                                   string={'View our showcase.'}
-                                   colour={'#fff'}
-                                   icon={terminalIcon}/>
-                        </div>
-
-                        <div>
-
-                            <Block link={'#showcase'} isMobile={isMobile} title={'Blog website'}
-                                   string={'View our showcase.'}
-                                   colour={'#fff'}
-                                   icon={terminalIcon}/>
-                        </div>
-
-                    </div>
-                </BlockBG>
+            <div id={'projects'} className={'before:hidden mb-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'}
+                 data-cursor-color={"#81ffca"}>
+                <div className={'lg:col-span-3'}>
+                    <Block title={'Projects'} link={'https://github.com/Parth589'} colour={'#070C0C'}
+                           isMobile={isMobile} lightText={true} string={'My GitHub Profile...'} icon={githubIcon}/>
+                </div>
+                <div>
+                    <ProjectCard title={'E-commerce cart'} link={'https://github.com/Parth589/ecommerce-cart'}
+                                 desc={'An ecommerce cart website built using Next js, postgresql and shadcn/ui'}/>
+                </div>
+                <div>
+                    <ProjectCard title={'Context.io'} link={'https://github.com/Parth589/context.io'}
+                                 desc={'A Text sharing platform utility built using Next js, postgresql and shadcn/ui'}/>
+                </div>
+                <div>
+                    <ProjectCard title={'ffmpeg-in-browser'} link={'https://github.com/Parth589/ffmpeg-in-browser'}
+                                 desc={'A Basic Ui wrapper of ffmpeg.wasm utility'}/>
+                </div>
             </div>
 
-            <div id={'contactUs'} className={'before:hidden'} data-cursor-color={"#d4c951"} data-cursor-background-text="React">
+            <div id={'contactUs'} className={'before:hidden'} data-cursor-color={"#d4c951"}
+                 data-cursor-background-text="React">
                 <BlockBG heading={'Contact us'} textColour={'yellow'}>
                     {/*Don&lsquo;t be a stranger. <br/> Let&lsquo;s connect*/}
                     Do you have a question, an idea, or a project you need help with? <br/> Just give a message! <br/>
                     <div className={'w-fit my-4 flex flex-col gap-5'}>
                         <div className={'flex gap-5 flex-wrap'}>
-                            <Badge>
-                                <a href="#">
-                                    abc@example.com
-                                </a>
+                            <Badge link={'mailto:p4rth4507@gmail.com'}>
+                                p4rth4507@gmail.com
                             </Badge>
-                            <Badge>
-                                <a href="#">
-                                    +1 9909099090
-                                </a>
+                            <Badge link={"https://wa.me/9898555706"}>
+                                +91 9898555706
                             </Badge>
                         </div>
                         <div className={'flex gap-5 '}>
-                            <div >
-                                <Badge>
-                                    <img src={linkedinIcon} className={'w-5'} alt=""
+                            <div>
+                                <Badge link={"https://www.linkedin.com/in/parth-parmar-2b5518245"}>
+                                    <img src={linkedinIcon} className={'w-5 aspect-square'} alt=""
                                          style={{filter: "invert(78%) sepia(90%) saturate(308%) hue-rotate(2deg) brightness(89%) contrast(90%)"}}/>
                                 </Badge>
                             </div>
-                            <Badge>
+                            <Badge link={'https://github.com/Parth589'}>
                                 <img src={githubIcon} className={'w-5'} alt=""
                                      style={{filter: "invert(78%) sepia(90%) saturate(308%) hue-rotate(2deg) brightness(89%) contrast(90%)"}}/>
                             </Badge>
-                            <Badge>
+                            <Badge link={"https://www.instagram.com/udad.ki.daal"}>
                                 <img src={instagramIcon} className={'w-5'} alt=""
                                      style={{filter: "invert(78%) sepia(90%) saturate(308%) hue-rotate(2deg) brightness(89%) contrast(90%)"}}/>
                             </Badge>
