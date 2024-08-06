@@ -3,7 +3,7 @@ const BlockBg = ({textColour, children, heading = null}) => {
     let colourClasses = ''
     switch (textColour) {
         case 'purple':
-            colourClasses = 'text-purple bg-grayBlue';
+            colourClasses = 'text-purple bg-grayPurple';
             break;
         case 'yellow':
             colourClasses = 'text-yellow bg-grayYellow';

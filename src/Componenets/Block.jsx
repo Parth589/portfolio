@@ -1,6 +1,7 @@
 // eslint-disable-next-line react/prop-types
 import {useEffect, useRef} from "react";
 import {gsap} from "gsap";
+import colors from "../assets/colors.js";
 
 // eslint-disable-next-line react/prop-types
 const Block = ({title, string, icon, colour, lightText = false, isMobile = false, link = '#', cursorColor}) => {
@@ -63,7 +64,7 @@ const Block = ({title, string, icon, colour, lightText = false, isMobile = false
     return (
         <a href={link} ref={divRef}
            className={`cursor-pointer overflow-hidden relative w-full h-full rounded-[45px] p-10 flex`}
-           style={{backgroundColor: colour, color: lightText ? '#fff' : '#000'}}
+           style={{backgroundColor: colour, color: lightText ? colors.white : colors.black}}
            data-cursor-color={cursorColor}>
             <div className="top-section absolute top-1/2 -translate-y-1/2">
                 <p ref={pRef} className={'font-bold opacity-0 relative whitespace-nowrap text-4xl px-4'}>

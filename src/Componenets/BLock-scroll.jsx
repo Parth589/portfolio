@@ -22,7 +22,7 @@ const BLockScroll = ({icon, title, content}) => {
     }, [])
     return (
         <div ref={parentRef}>
-            <div ref={ref} className={'flex flex-col md:flex-row gap-4 text-purple bg-grayBlue w-full rounded-[45px] p-10 translate-x-full'}>
+            <div ref={ref} className={'flex flex-col md:flex-row gap-4 text-purple bg-grayPurple w-full rounded-[45px] p-10 translate-x-full'}>
                 <div className={'icon flex items-center md:justify-center basis-1/6'} data-cursor-exclusion={true}>
                     <img src={icon} alt=""
                          className={'w-10 fill-purple'}
