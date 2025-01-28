@@ -2,7 +2,7 @@
 import colors from "./src/assets/colors.js";
 
 export default {
-    content: ["./src/**/*.{html,jsx}"],
+    content: ["./src/**/*.{html,jsx,tsx}"],
     theme: {
         extend: {
             colors,
@@ -14,4 +14,3 @@ export default {
     },
     plugins: [],
 }
-
