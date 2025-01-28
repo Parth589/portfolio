@@ -23,7 +23,7 @@ const Logo = () => {
             {/*<img ref={ref} src={logo} alt="" className={'h-full'}/>*/}
             <h1 ref={ref} className={'text-gray-400 text-2xl w-fit'}>
                 <span>Hi stranger, this is </span>
-                <div className={'font-bold mt-1 text-6xl text-white stroke-1 text-transparent tracking-widest'}>
+                <div className={'font-bold mt-1 text-6xl text-white-500 stroke-1 text-transparent tracking-widest'}>
                     P4RTH
                 </div>
             </h1>
