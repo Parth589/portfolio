@@ -10,7 +10,9 @@ import {
     Github,
     Cpu,
     LaptopMinimal,
+    Globe,
 } from "lucide-react";
+import Annotation from "./Componenets/animated/Annotation";
 import Logo from "./Componenets/Logo";
 import Block from "./Componenets/Block";
 import BlockBG from "./Componenets/BlockBG";
@@ -20,6 +22,7 @@ import { useEffect, useState } from "react";
 import ProjectCard from "./Componenets/ProjectCard";
 import colors from "./assets/colors";
 import { LucideX } from "lucide-react";
+import AnnotationProvider from "./Componenets/animated/AnnotationProvider"
 
 function App() {
     let [isMobile, setIsMobile] = useState<boolean>(false);
@@ -96,10 +99,10 @@ function App() {
                         bgColor={colors.yellow[600] as string}
                         title={"Who am I?"}
                     >
-                        A student and web developer specializing in{" "}
-                        <b className={"font-bold italic"}>Frontend</b> &{" "}
-                        <b className={"font-bold italic"}>Backend</b>{" "}
-                        development
+                        <AnnotationProvider>
+                        {/* A CS student passionate about <Annotation type="underline" color={colors.yellow[100]}> web development </Annotation>, Linux and open source */}
+                        A <Annotation type="underline"> driven </Annotation>CS student passionate about <Annotation type="underline">innovative</Annotation> web development, Linux, and open source.
+                        </AnnotationProvider>
                     </BlockBG>
                 </div>
             </div>
@@ -149,7 +152,7 @@ function App() {
                         animDirection="rtl"
                     />
                     <BLockScroll
-                        Icon={Eye}
+                        Icon={Globe}
                         color={colors.purple[200]}
                         bgColor={colors.purple[600]}
                         title={"Web"}

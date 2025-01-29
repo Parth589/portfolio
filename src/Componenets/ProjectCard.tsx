@@ -35,7 +35,7 @@ const ProjectCard = ({
             <span className={"text-lg max-w-lg"}>{desc}</span>
             <div className="flex flex-wrap gap-3 mt-3 mb-5">
                 {tags.map((tag) => (
-                    <span
+                    <span key={tag}
                         className={
                             "outline outline-white outline-1 text-white text-sm rounded-[36px] py-2 px-5"
                         }
